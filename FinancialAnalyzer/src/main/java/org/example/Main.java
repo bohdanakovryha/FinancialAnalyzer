@@ -7,10 +7,8 @@ public class Main {
 
         String filePath = "https://informer.com.ua/dut/java/pr2.csv";
 
-        // Використовуємо статичний метод без створення екземпляра класу
         List<Transaction> transactions = TransactionCSVReader.readTransactions(filePath);
 
-        // Використовуємо статичні методи для аналізу та генерації звітів
         double totalBalance = TransactionAnalyzer.calculateTotalBalance(transactions);
         TransactionReportGenerator.printBalanceReport(totalBalance);
 
